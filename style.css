@@ -223,45 +223,50 @@ html ,body{
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 20px;
+        padding: 5vh; /* Padding converted to vh */
     }
-    
 
+    /* Centering the image */
     .food img {
-        width:100%;
-        margin-bottom: 20px;
+        width: 70vw;  /* Adjusted width in vw */
+        max-width: 70vh;  /* Max width in vh */
+        height: auto;  /* Maintain aspect ratio */
+        margin: 0 auto;  /* Center horizontally */
+        display: block;  /* Ensure proper margin centering */
+        margin-bottom: 5vh; /* Margin below image in vh */
     }
 
     .heading {
-        margin-top: 5vh;
+        margin-top: 10vh; /* Margin top in vh */
         margin-right: 0;
-        padding: 0 10px;
+        padding: 0 5vw; /* Padding in vw for responsive spacing */
     }
 
     .heading h1 {
-        font-size: 2.2em;
+        font-size: 8vh; /* Font size in vh */
     }
 
     .heading p {
-        font-size: medium;
-        margin-top: 2vh;
+        font-size: 4vh; /* Font size in vh */
+        margin-top: 2vh; /* Margin top in vh */
     }
 
     .heading ul {
-        margin-top: 2vh;
+        margin-top: 2vh; /* Margin top in vh */
         padding: 0;
     }
 
     .heading ul li {
-        margin-bottom: 1vh;
+        margin-bottom: 1vh; /* Margin bottom in vh */
     }
 
     .btn3 {
         margin-left: 0;
-        width: 30vw;
-        font-size: 1em;
+        width: 30vw; /* Button width in vw */
+        font-size: 4vh; /* Font size in vh */
     }
 }
+
 
 .heading1 {
     padding: 6vh;
@@ -626,47 +631,196 @@ body {
     color: white;
 }
 @media (max-width: 1080px) {
+    /* Container and Matter */
     .container2 {
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        padding: 5vh;
     }
 
     .matter {
         width: 100%;
-        text-align: center;
-        margin-bottom: 2vh;
+        margin: 0;
+        padding: 0 5vw; /* Responsive padding */
     }
 
-    .matter h1, .matter p {
-        margin-left: 0;
-        font-size: 1.8em;
+    .matter h1,
+    .matter p {
+        margin: 2vh 0; /* Adjusted margins for mobile */
     }
 
     .navitems1 {
-        justify-content: center;
-        margin-right: 0;
-        margin-top: 2vh;
+        flex-direction: column;
+        align-items: center;
         gap: 2vh;
+        margin-right: 0;
+    }
+
+    .veg p,
+    .navitems1 p {
+        border: 0.1vh solid green;
+        padding: 2vh;
+        background-color: #21be29;
+        color: white;
+        margin: 0.5vh 0;
+    }
+
+    .navitems1 p:hover {
+        background-color: #23cf2c;
+    }
+
+    /* Products Section */
+    .products-section {
+        padding: 5vh;
     }
 
     .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 0 10px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust for fewer columns */
+        gap: 4vh;
     }
 
     .product-item {
-        padding: 15px;
+        padding: 4vh;
+        max-width: 100%; /* Ensure product items fit within the grid */
     }
 
     .product-item img {
-        width: 40vw;
-        height: auto;
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover the container */
+    }
+
+    .product-item h2 {
+        font-size: 16px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .product-actions button {
+        padding: 8px 16px;
+        font-size: 12px;
     }
 
     .button {
         width: 80%;
-        margin: 20px auto;
+        padding: 4vh;
+        border-radius: 3vh;
+        font-size: 3vh;
+    }
+
+    .button:hover {
+        transform: scale(1.05);
+        transition: all 0.2s;
+    }
+
+    /* Border and Heading */
+    .border {
+        text-align: center;
+        padding: 5vh;
+    }
+
+    .heading2 {
+        padding: 5vh;
+    }
+
+    .heading2 h1 {
+        font-size: 2.5em;
+    }
+
+    .heading2 p {
+        font-size: 1.5em;
+    }
+
+    .button1 {
+        padding: 4vh;
+        font-size: 3vh;
+    }
+
+    /* Customer Review Section */
+    .info.2 {
+        padding: 5vh;
+    }
+
+    .heading3 {
+        text-align: center;
+        padding: 0;
+    }
+
+    .heading3 h1 {
+        font-size: 2.5em;
+    }
+
+    .heading3 p {
+        font-size: 1.5em;
+    }
+
+    /* Review Cards */
+    .middlepart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4vh;
+    }
+
+    .card1,
+    .card2,
+    .card3 {
+        width: 100%;
+        max-width: 90%;
+        padding: 4vh;
+    }
+
+    .card1 i,
+    .card2 i,
+    .card3 i {
+        font-size: 3em;
+    }
+
+    .card1 p,
+    .card2 p,
+    .card3 p {
+        font-size: 1.2em;
+    }
+
+    .client1,
+    .client2,
+    .client3 {
+        display: flex;
+        align-items: center;
+        gap: 2vh;
+    }
+
+    .client1 img,
+    .client2 img,
+    .client3 img {
+        width: 20vh;
+        height: 20vh;
+        border-radius: 50%;
+    }
+
+    .name h3,
+    .name2 h3,
+    .name3 h3 {
+        font-size: 1.5em;
+    }
+
+    .name h5,
+    .name2 h5,
+    .name3 h5 {
+        font-size: 1.2em;
+    }
+
+    /* Green and Orange Lines */
+    .greenline2,
+    .orangeline2,
+    .greenline3,
+    .orangeline3 {
+        width: 80%;
+        height: 2vh;
+        margin: 5vh auto;
     }
 }
 
@@ -1009,7 +1163,7 @@ background-color: #23cf2c;
     .women img, .wheat img, .carrot img {
         width: 60vw;
         height: auto;
-        margin-left: 0;
+        margin-left: 10vh;
     }
 
     .women h2, .wheat h2, .carrot h2 {
